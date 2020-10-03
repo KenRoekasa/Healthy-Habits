@@ -1,13 +1,15 @@
-import threading
 import time
-from tkinter import messagebox
+
+from playsound import playsound
 
 running = True
 
+
 def hydrate(duration):
     time.sleep(duration)
-    messagebox.showinfo("Hydrate", "HYDRATE")
+    playsound('sounds/Hydrate.mp3')
+    # messagebox.showinfo("Hydrate", "HYDRATE")
+
 
 while running:
-    hydrate(60*60) # every hour now 
-
+    hydrate(60 * 60)  # every hour now
